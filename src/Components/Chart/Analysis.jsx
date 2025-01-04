@@ -15,10 +15,10 @@ const Analysis = () => {
   };
 
   return (
-    <section className=" bg-white w-full pt-2 px-4 overflow-y-auto">
+    <section className=" lg:h-[900px] h-[710px] bg-white w-full pt-2 px-4 overflow-y-auto">
       <div className="flex items-center">
-        <Link to={"/"} >
-        <i className="fas fa-chevron-left font-bold text-xl"></i>
+        <Link to={"/"}>
+          <i className="fas fa-chevron-left font-bold text-xl"></i>
         </Link>
         <p className="mx-auto text-xl">Statistics</p>
       </div>
@@ -29,7 +29,7 @@ const Analysis = () => {
       </div>
 
       <div>
-        <AnalyticsChart/>
+        <AnalyticsChart />
       </div>
     </section>
   );

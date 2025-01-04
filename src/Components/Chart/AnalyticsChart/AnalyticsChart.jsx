@@ -111,7 +111,7 @@ const AnalyticsChart = () => {
 
       <div className="flex justify-between mt-12 gap-4">
         {/* Total Income Card */}
-        <div className="border rounded p-3 w-[47%] bg-gradient-to-t from-blue-400 to-[#547ee8]">
+        <div className="border rounded-lg p-3 w-[47%] bg-gradient-to-t from-blue-400 to-[#547ee8]">
           <svg
             width="24"
             height="24"
@@ -128,7 +128,7 @@ const AnalyticsChart = () => {
         </div>
 
         {/* Total Expenses Card */}
-        <div className="border rounded p-4 w-[45%] bg-gradient-to-r to-orange-300 from-[#f38d43]">
+        <div className="border rounded-lg p-4 w-[45%] bg-gradient-to-r to-orange-300 from-[#f38d43]">
           <svg
             width="24"
             height="24"
