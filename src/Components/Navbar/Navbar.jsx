@@ -1,31 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
-  const [active, setActive] = useState(location.pathname); // Track the active route
+  const [active, setActive] = useState(location.pathname);
+
+  // Update active state whenever the location changes
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
 
   // Function to determine the icon color based on active state
-  const getIconColor = (route) =>
-    active === route ? "#547ee8" : "#000";
+  const getIconColor = (route) => (active === route ? "#547ee8" : "#000");
 
   return (
     <section className="navcon">
       <div className="navbar">
         <div className="nav-item">
-          <Link to="/" onClick={() => setActive("/")}>
+          <Link to="/" onClick={() => setActive("/dashboard")}>
             <i
               className="fas fa-home"
               style={{
-                color: getIconColor("/"),
-                fontSize: "20px", // Adjust the icon size
-                paddingBottom: "5px", // Space for the bottom border
+                color: getIconColor("/dashboard"),
+                fontSize: "20px",
+                paddingBottom: "5px",
               }}
             ></i>
             <div
               style={{
-                backgroundColor: getIconColor("/"),
-                border: active === "/" ? "3px solid #547ee8" : "none",
+                backgroundColor: getIconColor("/dashboard"),
+                border: active === "/dashboard" ? "3px solid #547ee8" : "none",
                 borderRadius: "5px",
                 width: "100%",
               }}
@@ -38,13 +42,13 @@ const Navbar = () => {
               className="fas fa-chart-bar"
               style={{
                 color: getIconColor("/chart"),
-                fontSize: "20px", // Adjust the icon size
-                paddingBottom: "5px", // Space for the bottom border
+                fontSize: "20px",
+                paddingBottom: "5px",
               }}
             ></i>
             <div
               style={{
-                backgroundColor: getIconColor("/"),
+                backgroundColor: getIconColor("/chart"),
                 border: active === "/chart" ? "3px solid #547ee8" : "none",
                 borderRadius: "5px",
                 width: "100%",
@@ -58,9 +62,8 @@ const Navbar = () => {
               className="fas fa-credit-card"
               style={{
                 color: getIconColor("/cards"),
-                fontSize: "20px", // Adjust the icon size
-                paddingBottom: "5px", // Space for the bottom border
-             
+                fontSize: "20px",
+                paddingBottom: "5px",
               }}
             ></i>
             <div
@@ -79,9 +82,8 @@ const Navbar = () => {
               className="fas fa-user"
               style={{
                 color: getIconColor("/profile"),
-                fontSize: "20px", // Adjust the icon size
-                paddingBottom: "5px", // Space for the bottom border
-               
+                fontSize: "20px",
+                paddingBottom: "5px",
               }}
             ></i>
             <div

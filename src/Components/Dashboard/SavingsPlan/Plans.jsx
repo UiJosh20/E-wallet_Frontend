@@ -23,15 +23,14 @@ const Plans = () => {
             key={i}
             className="bg-gray-100 flex-shrink-0 rounded-lg shadow-sm p-2"
             style={{
-              width: "300px", // Make the width and height equal for a square shape
+              width: "300px",
               height: "100px",
-              flexBasis: "200px", // Ensure the square size is consistent in the flex container
+              flexBasis: "200px", 
             }}
           >
             {/* Icon Section */}
             <div className="h-full flex flex-col justify-center items-center">
               <div className="mb-2">
-                {/* Replace with actual item.icon if available */}
                 <img
                   src={item.icon}
                   alt="icon"
