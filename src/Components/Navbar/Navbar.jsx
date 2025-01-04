@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { QrReader } from "react-qr-reader"; // Install this library via npm
+import { QrReader } from "react-qr-reader"; 
 import scan from "../../assets/scan.png";
 
 const Navbar = () => {

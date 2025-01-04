@@ -4,6 +4,8 @@ import user from "../../assets/user.png";
 import logo from "../../assets/logo.png";
 import code from "../../assets/Group.png";
 import { fetchTransactions } from "../../api";
+import { QrReader } from "react-qr-reader"; 
+
 
 const Profile = () => {
   const [username, setUsername] = useState("");
