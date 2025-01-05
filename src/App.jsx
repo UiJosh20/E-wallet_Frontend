@@ -11,24 +11,24 @@ function App() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check the screen size on mount and when resized
+    
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+      setIsMobile(window.innerWidth <= 868); 
     };
 
-    // Initial check
+   
     handleResize();
 
-    // Add event listener for resizing
+  
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener on unmount
+    
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  // Show message if not on mobile
+  
   if (!isMobile) {
     return (
       <div
@@ -173,7 +173,7 @@ h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"
             </svg>
           </div>
         </div>
-        <h1 className="text-xl">Please view this app on a mobile screen.</h1>
+        <h1 className="text-xl">Please view this application on a mobile or tablet screen.</h1>
       </div>
     );
   }
