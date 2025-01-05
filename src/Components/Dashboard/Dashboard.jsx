@@ -6,6 +6,7 @@ import transfer from "../../assets/Vector.png";
 import send from "../../assets/material-symbols_add.png";
 import History from "./TransactionHistory/History";
 import Balance from "./Balance/Balance";
+import UserSavingsPlan from "./SavingsPlan/UserSavingsPlan";
 
 
 const Dashboard = () => {
@@ -44,7 +45,7 @@ const Dashboard = () => {
         <History/>
 
         {/* Savings plan */}
-        <Plans/>
+        <UserSavingsPlan/>
        
       </section>
     </>
