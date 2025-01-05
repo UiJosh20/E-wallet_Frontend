@@ -12,9 +12,9 @@ const Profile = () => {
   const [balance, setBalance] = useState("");
   const [uid, setUid] = useState("");
   const [showModalcode, setShowModalcode] = useState(false);
-    const [showScanner, setShowScanner] = useState(false); // Toggle for QR Scanner
-    const [qrData, setQrData] = useState(null); // Store scanned QR data
-    const [showModal, setShowModal] = useState(false); // Toggle for Add Manually modal
+    const [showScanner, setShowScanner] = useState(false); 
+    const [qrData, setQrData] = useState(null); 
+    const [showModal, setShowModal] = useState(false); 
     const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
@@ -28,12 +28,12 @@ const Profile = () => {
     setUid(res.data.UID);
   };
 
-  // Handle QR scanner result
+  
   const handleScan = (result) => {
     if (result) {
-      setQrData(result.text); // Use result.text for the scanned QR data
-      setShowScanner(false); // Close scanner after successful scan
-      console.log("Scanned Data:", result.text);
+      setQrData(result.text);
+      setShowScanner(false); 
+     
     }
   };
 
@@ -176,7 +176,6 @@ const Profile = () => {
               <button
                 onClick={() => {
                   setInputValue("");
-                  console.log("UID entered:", inputValue);
                   setShowModal(false);
                 }}
                 className="px-4 py-2 bg-[#547ee8] w-full text-white rounded"

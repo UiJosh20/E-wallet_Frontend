@@ -6,27 +6,24 @@ import scan from "../../assets/scan.png";
 const Navbar = () => {
   const location = useLocation();
   const [active, setActive] = useState(location.pathname);
-  const [showScanner, setShowScanner] = useState(false); // Toggle for QR Scanner
-  const [qrData, setQrData] = useState(null); // Store scanned QR data
-  const [showModal, setShowModal] = useState(false); // Toggle for Add Manually modal
-  const [inputValue, setInputValue] = useState(""); // Input value for UID
+  const [showScanner, setShowScanner] = useState(false); 
+  const [qrData, setQrData] = useState(null); 
+  const [showModal, setShowModal] = useState(false); 
+  const [inputValue, setInputValue] = useState(""); 
 
-  // Update active state whenever the location changes
+  
   useEffect(() => {
-    console.log(location.pathname);
     setActive(location.pathname);
 
   }, [location.pathname]);
 
-  // Function to determine the icon color based on active state
   const getIconColor = (route) => (active === route ? "#547ee8" : "#000");
 
   // Handle QR scanner result
   const handleScan = (result) => {
     if (result) {
-      setQrData(result.text); // Use result.text for the scanned QR data
-      setShowScanner(false); // Close scanner after successful scan
-      console.log("Scanned Data:", result.text);
+      setQrData(result.text);
+      setShowScanner(false);
     }
   };
 
@@ -205,7 +202,6 @@ const Navbar = () => {
               <button
                 onClick={() => {
                   setInputValue("");
-                  console.log("UID entered:", inputValue);
                   setShowModal(false);
                 }}
                 className="px-4 py-2 bg-[#547ee8] w-full text-white rounded"
