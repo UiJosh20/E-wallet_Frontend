@@ -21,7 +21,7 @@ const Dashboard = () => {
 
         {/* card */}
         <div className="w-full">
-          <img src={card} />
+          <img src={card} className="w-full" />
         </div>
 
         {/* transaction button */}

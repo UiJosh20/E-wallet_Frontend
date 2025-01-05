@@ -26,7 +26,7 @@ const Accounts = () => {
       </div>
 
       <div>
-        <img src={cards} alt="" />
+        <img src={cards} alt="" className='w-full' />
       </div>
 
       <div className="mt-6 flex justify-between items-center">
