@@ -70,7 +70,7 @@ const Profile = () => {
           {/* Show Modal Button */}
           <button
             className="bg-[#547ee8] rounded-lg p-3 text-white mx-auto w-60"
-            onClick={() => setShowScanner(true)}
+            onClick={() => setShowModalcode(true)}
           >
             Show QR Code
           </button>
@@ -82,7 +82,7 @@ const Profile = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300">
           <div className="bg-white rounded-lg p-6 w-[90%] md:w-[50%] shadow-lg transition-transform duration-300 scale-100">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold">QR Code</h2>
+              <h2 className="text-lg font-semibold">Call me {username}</h2>
               <button
                 onClick={() => setShowModalcode(false)}
                 className="text-gray-500 hover:text-gray-800"
@@ -96,7 +96,7 @@ const Profile = () => {
 
               <button
                 className="border border-[#547ee8] rounded-lg px-4 py-2 text-[#547ee8] flex gap-5 items-center"
-                onClick={() => alert("Scanning QR Code...")}
+                onClick={() => setShowScanner(true)}
               >
                 <i className="fas fa-camera"></i>
                 Scan QR Code
