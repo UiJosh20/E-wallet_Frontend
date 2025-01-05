@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 868); 
+      setIsMobile(window.innerWidth <= 858); 
     };
 
    
@@ -173,7 +173,7 @@ h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"
             </svg>
           </div>
         </div>
-        <h1 className="text-xl">Please view this application on a mobile or tablet screen.</h1>
+        <h1 className="text-xl">Please view this app on a mobile screen.</h1>
       </div>
     );
   }
