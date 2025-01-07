@@ -30,7 +30,7 @@ const History = () => {
       {loading ? (
         // Show loader while data is being fetched
         <div className="flex justify-center items-center mt-10">
-          <div className="loader animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500"></div>
+          <div className="loader3 animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500"></div>
         </div>
       ) : history.length > 0 ? (
         // Show data once loaded
